@@ -48,7 +48,6 @@ const addContact = async (name, email, phone) => {
   try {
     const newContact = { id: v4(), name, email, phone };
     const contacts = await listContacts();
-    // const newContacts = [...contacts, newContact];
     contacts.push(newContact);
 
     const contacsString = JSON.stringify(contacts);
